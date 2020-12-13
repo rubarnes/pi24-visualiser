@@ -82,11 +82,7 @@ if __name__ == "__main__":
 
 	if args.test:
 		DEBUG = True
-	
-	json_file = open(args.data, 'r')
-	data = json.load(json_file)
-	json_file.close()
-
+		
 	if not DEBUG:
 		# TODO: What is 0x27?
 		disp = i2c.LiquidCrystal_I2C(0x27, 1, numlines=4)
@@ -95,14 +91,15 @@ if __name__ == "__main__":
 	
 	# Python doesn't have Do ... While, so this is a kind-of hack to get the same outcome.
 	while True: # DO
+		
+		json_file = open(args.data, 'r')
+		data = json.load(json_file)
+		json_file.close()
+
 		display(data, disp, args.wait)
 
 		if not args.loop: # WHILE
 			break
 
 		time.sleep(args.wait)
-		
-		json_file = open(args.data, 'r')
-		data = json.load(json_file)
-		json_file.close()
 
