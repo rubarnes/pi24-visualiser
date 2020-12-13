@@ -3,8 +3,6 @@
 import liquidcrystal_i2c as i2c
 import time
 import json
-from tendo import singleton
-singleton.SingleInstance()
 
 
 def make_data_string(craft):
