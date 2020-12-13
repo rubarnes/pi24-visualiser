@@ -36,7 +36,6 @@ while True:
 		print(i, j)
 		craft = aircraft[i]
 		if i % 4 == 0 and i > 0:
-			print "PEnis"
 			j = 0
 			time.sleep(5)
 			DISPLAY.clear()
