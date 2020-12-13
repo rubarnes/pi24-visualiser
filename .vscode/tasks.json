@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Test",
+			"type": "shell",
+			"command": "python pi24-visualiser.py --test 1 -d aircraft_sample.json",
+			"group": "test"
+		},
+		{
+			"label": "Test Looping",
+			"type": "shell",
+			"command": "python pi24-visualiser.py --test 1 -d aircraft_sample.json --loop 1",
+			"group": "test"
+		}
+	]
+}
